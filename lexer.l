@@ -169,6 +169,7 @@ escaped_ident		_[A-Za-z0-9_]+
 warn1_ident		[A-Za-z][A-Za-z0-9_]*
 prop_key		[A-Za-z][A-Za-z0-9_]*
 prop_value		\([^\)]+\)
+annotation		@{prop_key}{whitespace}{prop_value}?
 native_type		[^\)]+\)
 sqstring		\'[^\'\n]*[\'\n]
 dqstring		\"[^\"\n]*[\"\n]
@@ -266,6 +267,7 @@ dqstring		\"[^\"\n]*[\"\n]
 	 	tokreturn (TOK_SRCFILE);
 }
 <*>{cpp_other}						;
+<*>{annotation}						;
 <*>{whitespace}						;
 {b8_int}						{
 	yylval.integer = 0;
