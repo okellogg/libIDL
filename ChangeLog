@@ -1,3 +1,9 @@
+2018-01-06  Oliver Kellogg  <okellogg@users.sourceforge.net>
+
+	* lexer.l: Skip IDL4 annotations.
+
+==================== 0.8.14 ====================
+
 2009-10-12  Christian Persch  <chpe@gnome.org>
 
 	* Makefile.am:
